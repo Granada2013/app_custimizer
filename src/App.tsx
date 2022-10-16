@@ -1,25 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import MainPage from "./ste_pages/mainPage";
+import ProfilePage from "./ste_pages/profilePage";
 
 function App() {
+  const [show, setShow] = useState<boolean>(false);
+  const [currentPage, setCurrentPage] = useState<number>(0);
+
+  const renderPage = (index: number) => {
+    switch (index) {
+      case 0:
+        return <MainPage />;
+      case 1:
+        return <ProfilePage />;
+      default:
+        return <MainPage />;
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <React.Fragment>
+      <header>
+        <nav className="nav">
+          <div className="nav__left">
+            {/* <img src={} alt={"logo"} /> */}
+            <span>Your Brand Name!</span>
+          </div>
+          <ul className="nav__right">
+            <li>Profile</li>
+            <li>Help</li>
+            <li>Notifications</li>
+          </ul>
+        </nav>
       </header>
-    </div>
+      <main>{renderPage(currentPage)}</main>
+    </React.Fragment>
   );
 }
 
