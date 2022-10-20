@@ -1,0 +1,90 @@
+.nav, .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 48px;
+    align-items: center;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.nav__left {
+    cursor: pointer;
+}
+
+.nav__logo {
+    height: 50px;
+}
+
+.nav__right {
+    display: flex;
+    align-items: center;
+}
+
+.nav__right li {
+    list-style: none;
+    margin-right: 40px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.nav__right li:not(.nav__button):not(.nav__profile):hover, .nav__profile p:hover {
+    border-bottom: 2px solid rgb(var(--color-custom));
+    color: rgb(var(--color-custom));
+}
+
+.nav__right li:last-of-type {
+    margin-right: 0;
+}
+
+.nav__profile {
+    display: flex;
+    align-items: center;
+}
+
+.nav__profile p {
+    margin-left: 5px;
+}
+
+.nav__button button {
+    padding: 10px 20px;
+    background-color: rgb(var(--color-custom));
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    color: #fff;
+    font-size: var(--text-size-regular);
+    box-shadow: -7px 0 10px 0 rgba(70, 70, 71, 0.2);
+
+}
+
+.nav__button button:hover {
+    background-color: #189462;
+}
+
+.footer {
+    margin-bottom: 0;
+    background-color: rgba(var(--color-custom), .1);
+    font-size: var(--text-size-small);
+}
+
+.footer__icons {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+}
+
+.footer__icons  img {
+    height: 20px;
+    width: 20px;
+    margin-right: 20px;
+}
+
+.footer__icons  img:last-of-type {
+    margin-right: 0;
+}
+
+.footer__iconsCredit {
+    font-size: 10px;
+    text-align: end;
+}

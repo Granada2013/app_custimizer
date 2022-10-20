@@ -1,31 +1,125 @@
-
-.nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px 40px;
-    align-items: center;
+main {
+  height: calc(100% - 180px);
+      padding: 0 48px;
 }
 
-.nav__left {
+.mainContainer {
+    min-width: 380px;
+    height: 100vh;
+    position: relative;
+}
+
+.side {
+    position: relative;
+    width: 350px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 20px;
+    background-color: rgb(var(--color-light-blue));
+    box-shadow: -5px 0px 20px 0 rgba(70, 70, 71, 0.2);
+  }
+
+  .icon_close {
+    background-color: transparent;
+    border: none;
+    font-weight: 500;
     cursor: pointer;
-}
+    position: absolute;
+    right: 20px;
+    font-size: 18px;
+  }
 
-.nav__right {
-    display: flex;
-}
-
-.nav__right li {
-    list-style: none;
-    margin-right: 40px;
-    cursor: pointer;
-}
-
-.nav__right li:hover {
-    border-bottom: 2px solid rgb(var(--color-custom));
+  .icon_close:hover {
     color: rgb(var(--color-custom));
-}
+  }
 
-.nav__right li:last-of-type {
-    margin-right: 0;
-}
+  .slider {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    left: 20px;
+    right: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+
+  .slider__button {
+    height: 58px;
+    width: 30px;
+    border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+    border: none;
+    background-color: rgb(var(--color-light-blue));
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: -5px 0 10px 0 rgba(70, 70, 71, 0.2);
+
+  }
+
+  .slider__button:first-of-type {
+    border-radius: 100% 0 0 100% / 50% 0 0 50%;
+  }
+
+  .slider__button:hover {
+    border: none;
+    background-color: rgb(212, 213, 214);
+  }
+
+
+  .slide-in {
+    animation: slide-in 1200ms ease;
+  }
+
+  .slide-out {
+    animation: slide-out 1200ms ease;
+  }
+
+  .slide-in-main {
+    animation: slide-in-main 1200ms ease;
+  }
+
+  .slide-out-main {
+    animation: slide-out-main 1200ms ease;
+  }
+
+  @keyframes slide-in {
+    from {
+      right: -350px;
+    }
+  
+    to {
+      right: 0;
+    }
+  }
+
+  @keyframes slide-out {
+    from {
+      right: 0;
+    }
+  
+    to {
+      right: -350px;
+    }
+  }
+
+  @keyframes slide-in-main {
+    from {
+      width: 100%;
+    }
+  
+    to {
+      width: calc(100% - 350px);
+    }
+  }
+
+  @keyframes slide-out-main {
+    from {
+      width: calc(100% - 350px);
+    }
+  
+    to {
+      width: 100%;
+    }
+  }

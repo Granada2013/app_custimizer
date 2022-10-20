@@ -1,6 +1,9 @@
 :root {
   --color-custom: 32, 176, 118;
-  --color-text: 39, 38, 41;
+  --color-text: 56, 55, 59; /*#38373B*/
+  --color-light-blue: 245, 249, 252;
+  --text-size-regular: 16px;
+  --text-size-small: 13px;
 }
 
 * {
@@ -14,16 +17,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: rgb(var(--color-text))
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-main {
-  padding: 0 40px;
+  color: rgb(var(--color-text));
+  font-size: var(--text-size-regular);
 }
 
 
