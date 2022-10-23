@@ -1,6 +1,6 @@
 main {
-  /* height: calc(100% - 180px); */
-      padding: 0 48px;
+  min-height: calc(100% - 180px);
+      padding: 0 55px;
 }
 
 .mainContainer {

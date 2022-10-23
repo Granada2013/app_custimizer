@@ -115,6 +115,13 @@
 }
 
 .profile_info {
+    text-align: center;
     width: 40%;
 }
+
+
+.help_form {
+    width: 50%;
+}
+
 

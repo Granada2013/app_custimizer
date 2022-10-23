@@ -3,12 +3,17 @@ import "./components.css";
 
 interface Props {
   text: string;
-  onClick: (e: any) => void;
+  onClick?: () => void;
 }
 
 const Button = (props: Props) => {
+  const handleClick = (e: any) => {
+    e.preventDefault();
+    if (props.onClick) props.onClick();
+  };
+
   return (
-    <button className="submit" onClick={props.onClick}>
+    <button className="submit" onClick={handleClick}>
       {props.text}
     </button>
   );

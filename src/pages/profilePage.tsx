@@ -6,9 +6,6 @@ const avatarMale = require("../static/avatar_male.jpg");
 const avatarFemale = require("../static/avatar_female.jpg");
 
 const ProfilePage = () => {
-  const handleClick = (e: any) => {
-    e.preventDefault();
-  };
   return (
     <React.Fragment>
       <div className="profile">
@@ -19,16 +16,31 @@ const ProfilePage = () => {
         </div>
         <form className="profile_info">
           <div className="row">
-            <Input name="Nickname" value="Anna" />
+            <Input
+              type="text"
+              name="Nickname"
+              value="Anna"
+              alignCenter={true}
+            />
           </div>
           <div className="row">
-            <Input name="Email" value="myemail@gmail.com" />
+            <Input
+              type="email"
+              name="Email"
+              value="myemail@gmail.com"
+              alignCenter={true}
+            />
           </div>
           <div className="row">
-            <Input name="Phone number" value="89231261106" />
+            <Input
+              type="text"
+              name="Phone"
+              value="89231261106"
+              alignCenter={true}
+            />
           </div>
-          <div className="row" style={{ textAlign: "center" }}>
-            <Button text="Update" onClick={handleClick} />
+          <div className="row">
+            <Button text="Update profile" />
           </div>
         </form>
       </div>
