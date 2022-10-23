@@ -1,25 +1,28 @@
 import React, { useState } from "react";
 import CustomizerPanel from "./customizerPanel";
-import MainPage from "./pages/mainPage";
 import NavBar from "./pages/navBar";
 import ProfilePage from "./pages/profilePage";
 import "./App.css";
 import FooterBar from "./pages/footer";
+import NotificationsPage from "./pages/notificationsPage";
+import HelpPage from "./pages/helpPage";
 
 function App() {
   const [show, setShow] = useState<boolean>(false);
   const [currentPage, setCurrentPage] = useState<number>(1);
 
-  const NUM_PAGES = 2;
+  const NUM_PAGES = 3;
 
   const renderPage = (index: number) => {
     switch (index) {
       case 1:
-        return <MainPage />;
-      case 2:
         return <ProfilePage />;
+      case 2:
+        return <NotificationsPage />;
+      case 3:
+        return <HelpPage />;
       default:
-        return <MainPage />;
+        return <ProfilePage />;
     }
   };
 

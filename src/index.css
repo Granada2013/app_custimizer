@@ -2,8 +2,9 @@
   --color-custom: 32, 176, 118;
   --color-text: 56, 55, 59; /*#38373B*/
   --color-light-blue: 245, 249, 252;
-  --text-size-regular: 16px;
-  --text-size-small: 13px;
+  --color-grey: 235, 230, 230 /*#ebe6e6*/;
+  --text-size-regular: 1rem;
+  --text-size-small: 0.8rem;
 }
 
 * {
@@ -19,6 +20,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: rgb(var(--color-text));
   font-size: var(--text-size-regular);
+  scrollbar-width: thin;
+}
+
+body::-webkit-scrollbar {
+  width: 2px;
+}
+
+.row {
+  margin-bottom: 20px;
 }
 
 

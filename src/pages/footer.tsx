@@ -7,7 +7,7 @@ const FooterBar = () => {
   const year = new Date().getFullYear();
   return (
     <footer className="footer">
-      <p>{year} &#169; Your copyright text will be here!</p>
+      <p>{year} &#169; Your company copyright here!</p>
       <div>
         <div className="footer__icons">
           <img src={twitter} />
