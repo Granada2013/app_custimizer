@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CustomizerPanel from "./customizerPanel";
-import NavBar from "./pages/navBar";
+import Header from "./pages/header";
 import ProfilePage from "./pages/profilePage";
 import "./App.css";
 import FooterBar from "./pages/footer";
@@ -52,7 +52,7 @@ function App() {
         style={{ width: show ? "calc(100% - 350px)" : "100%" }}
       >
         <header>
-          <NavBar show={show} setShow={handleShowCustomPanel} />
+          <Header show={show} setShow={handleShowCustomPanel} />
         </header>
         <main>
           <div className="slider">
