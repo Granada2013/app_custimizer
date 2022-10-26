@@ -7,22 +7,24 @@ interface Props {
   viewBox: string;
   height?: number;
   width?: number;
+  title?: string;
 }
 
 const Icon = (props: Props) => {
   return (
-    <svg
-      viewBox={props.viewBox}
-      className={`o-icon ${props.name}`}
-      width={props.width ? props.width + "px" : "30px"}
-      height={props.height ? props.height + "px" : "30px"}
-      style={{
-        fill:
-          props.color === "custom" ? "rgb(var(--color-custom))" : props.color,
-      }}
-    >
-      <use xlinkHref={`${Icons}#${props.name}`} />
-    </svg>
+    <span title={props.title}>
+      <svg
+        viewBox={props.viewBox}
+        className={`o-icon ${props.name}`}
+        width={props.width ? props.width + "px" : "30px"}
+        height={props.height ? props.height + "px" : "30px"}
+        style={{
+          fill: props.color === "custom" ? "var(--color-custom)" : props.color,
+        }}
+      >
+        <use xlinkHref={`${Icons}#${props.name}`} />
+      </svg>
+    </span>
   );
 };
 

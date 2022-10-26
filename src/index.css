@@ -1,8 +1,10 @@
 :root {
-  --color-custom: 32, 176, 118;
-  --color-text: 56, 55, 59; /*#38373B*/
-  --color-light-blue: 245, 249, 252;
-  --color-grey: 235, 230, 230 /*#ebe6e6*/;
+  --color-custom: #20b076;
+  --color-footer: #e9f7f1;
+  --color-text: #38373B;
+  --color-light-blue: #f5f9fc;
+  --color-grey: #ebe6e6;
+  --color-shadow: rgba(70, 70, 71, 0.2);
   --text-size-regular: 1rem;
   --text-size-small: 0.8rem;
   --text-size-large: 1.5rem;
@@ -13,7 +15,7 @@
 }
 
 *:focus {
-  outline: 2px solid rgba(var(--color-custom), .8);
+  outline: none;
 }
 
 body {

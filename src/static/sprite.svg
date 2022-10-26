@@ -10,4 +10,7 @@
 	L9,74.9V32.1z M12.8,77l26.5-21l9.5,7.5c0.4,0.3,0.8,0.4,1.2,0.4s0.9-0.1,1.2-0.4l9.5-7.5l26.5,21H12.8z M91,74.9L64,53.5l27-21.4
 	V74.9z M91,27l-1.2,1L50,59.5L10.2,28L9,27v-4h82V27z"/>
     </g>
+	<g id='icon-download'>
+		<svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+	</g>
 </svg>

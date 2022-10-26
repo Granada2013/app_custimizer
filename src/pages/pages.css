@@ -32,8 +32,8 @@
 }
 
 .nav__right li p:hover {
-    border-bottom: 2px solid rgb(var(--color-custom));
-    color: rgb(var(--color-custom));
+    border-bottom: 2px solid var(--color-custom);
+    color: var(--color-custom);
 }
 
 .nav__right li:last-of-type {
@@ -51,13 +51,13 @@
 
 .nav__button button {
     padding: 10px 20px;
-    background-color: rgb(var(--color-custom));
+    background-color: var(--color-custom);
     border: none;
     border-radius: 50px;
     cursor: pointer;
     color: #fff;
     font-size: var(--text-size-regular);
-    box-shadow: -7px 0 10px 0 rgba(70, 70, 71, 0.2);
+    box-shadow: -7px 0 10px 0 var(--color-shadow);
 
 }
 
@@ -67,7 +67,7 @@
 
 .footer {
     margin-bottom: 0;
-    background-color: rgba(var(--color-custom), .1);
+    background-color: var(--color-footer);
     font-size: var(--text-size-small);
 }
 
@@ -100,18 +100,33 @@
     height: 100%;
 }
 
+.profile__avatar {
+    text-align: center;
+}
+
 .avatar__wrapper {
     border-radius: 50%;
     overflow: hidden;
     width: 180px;
     height: 180px;
-    border: 8px solid rgba(var(--color-custom));
+    border: 8px solid var(--color-custom);
 }
 
 .avatar__img {
     width:100%;
     height:100%;
     object-fit: cover;
+}
+
+.avatar__upload {
+    position: relative;
+    font-size: var(--text-size-small);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.avatar__upload:hover {
+    color: var(--color-custom);
 }
 
 .profile_info {

@@ -17,8 +17,8 @@ main {
     top: 0;
     bottom: 0;
     padding: 20px;
-    background-color: rgb(var(--color-light-blue));
-    box-shadow: -5px 0px 20px 0 rgba(70, 70, 71, 0.2);
+    background-color: var(--color-light-blue);
+    box-shadow: -5px 0px 20px 0 var(--color-shadow);
   }
 
   .icon_close {
@@ -32,7 +32,7 @@ main {
   }
 
   .icon_close:hover {
-    color: rgb(var(--color-custom));
+    color: var(--color-custom);
   }
 
   .slider {
@@ -50,11 +50,11 @@ main {
     width: 30px;
     border-radius: 0 100% 100% 0 / 0 50% 50% 0;
     border: none;
-    background-color: rgb(var(--color-light-blue));
+    background-color: var(--color-light-blue);
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
-    box-shadow: -5px 0 10px 0 rgba(70, 70, 71, 0.2);
+    box-shadow: -5px 0 10px 0 var(--color-shadow);
 
   }
 

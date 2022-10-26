@@ -1,6 +1,6 @@
 .input, .textarea {
     width: 100%;
-    border: 1px solid rgb(var(--color-grey));
+    border: 1px solid var(--color-grey);
     border-radius: 3px;
     font-size: var(--text-size-regular);
     color: var(--color-text);
@@ -19,7 +19,7 @@
 
 .input:focus, .textarea:focus {
     outline: none;
-    border: 3px solid rgb(var(--color-custom));;
+    border: 3px solid var(--color-custom);;
 }
 
 .input_label {
@@ -29,7 +29,7 @@
 .submit {
     border-radius: 50px;
     border: none;
-    background-color: rgb(var(--color-custom));
+    background-color: var(--color-custom);
     padding: 10px 20px;
     font-size: var(--text-size-regular);
     cursor: pointer;
@@ -37,14 +37,14 @@
 }
 
 .submit:hover {
-    background-color: rgba(var(--color-custom), .8);
+    opacity: 0.8;
 }
 
 .tip {
     position: absolute;
     width: 200px;
-    background-color: rgb(var(--color-light-blue));
-    box-shadow: -5px 0px 20px 0 rgba(70, 70, 71, 0.2);
+    background-color: var(--color-light-blue);
+    box-shadow: -5px 0px 20px 0 var(--color-shadow);
     border-radius: 24px;
     border-top-left-radius: 0px;
     z-index: 2;
