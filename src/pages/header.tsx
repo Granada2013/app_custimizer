@@ -3,8 +3,6 @@ import "./pages.css";
 import Icon from "../components/icon";
 import Tip from "../components/tip";
 
-const defaultImg = require("../static/logo1.png");
-
 interface Props {
   show: boolean;
   setShow: () => void;
@@ -15,7 +13,7 @@ const Header = (props: Props) => {
   return (
     <nav className="nav">
       <div className="nav__left">
-        <img src={defaultImg} className="nav__logo" alt={"logo"} />
+        <div className="nav__logo" />
       </div>
       <ul className="nav__right">
         <li className="nav__profile">

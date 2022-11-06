@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CustomizerPanel from "./customizerPanel";
 import Header from "./pages/header";
 import ProfilePage from "./pages/profilePage";
@@ -6,12 +6,27 @@ import "./App.css";
 import FooterBar from "./pages/footer";
 import NotificationsPage from "./pages/notificationsPage";
 import HelpPage from "./pages/helpPage";
+import { useSelector } from "react-redux";
 
 function App() {
+  const state: any = useSelector((state) => state);
   const [show, setShow] = useState<boolean>(false);
   const [currentPage, setCurrentPage] = useState<number>(1);
 
   const NUM_PAGES = 3;
+
+  useEffect(() => {
+    document.documentElement.style.setProperty("--color-custom", state.custom);
+  }, [state.custom]);
+
+  useEffect(() => {
+    document.documentElement.style.setProperty("--color-footer", state.footer);
+  }, [state.footer]);
+
+  useEffect(() => {
+    if (state.logo)
+      document.documentElement.style.setProperty("--color-logo", state.logo);
+  }, [state.logo]);
 
   const renderPage = (index: number) => {
     switch (index) {
@@ -73,3 +88,6 @@ function App() {
 }
 
 export default App;
+function useEfect() {
+  throw new Error("Function not implemented.");
+}

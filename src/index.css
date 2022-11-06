@@ -1,4 +1,5 @@
 :root {
+  --logo: url('./static/logo.png');
   --color-custom: #20b076;
   --color-footer: #e9f7f1;
   --color-text: #38373B;
@@ -36,6 +37,10 @@ h1 {
 
 .row {
   margin-bottom: 20px;
+}
+
+.row_large {
+  margin-bottom: 50px;
 }
 
 

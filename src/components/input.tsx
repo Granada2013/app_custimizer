@@ -6,23 +6,36 @@ interface Props {
   type: "text" | "email" | "password" | "number";
   value?: string;
   alignCenter?: boolean;
+  width?: string;
+  onChange?: (val: string) => void;
+  onBlur?: any;
 }
 
 const Input = (props: Props) => {
   const [value, setValue] = useState(props.value);
+  const handleChange = (e: any) => {
+    setValue(e.target.value);
+    if (props.onChange) props.onChange(e.target.value);
+  };
 
   return (
-    <label htmlFor={props.name} className="input_label">
-      {props.name}
+    <React.Fragment>
+      <label htmlFor={props.name} className="input_label">
+        {props.name}
+      </label>
       <input
         type={props.type}
         className="input"
         value={value}
         id={props.name}
-        onChange={(e) => setValue(e.target.value)}
-        style={{ textAlign: props.alignCenter ? "center" : "left" }}
+        onChange={handleChange}
+        onBlur={props.onBlur}
+        style={{
+          textAlign: props.alignCenter ? "center" : "left",
+          width: props.width || "100%",
+        }}
       />
-    </label>
+    </React.Fragment>
   );
 };
 

@@ -14,6 +14,10 @@
 
 .nav__logo {
     height: 50px;
+    width: 100px;
+    background: var(--logo);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .nav__right {
@@ -51,7 +55,7 @@
 
 .nav__button button {
     padding: 10px 20px;
-    background-color: var(--color-custom);
+    background-color: #20b076;
     border: none;
     border-radius: 50px;
     cursor: pointer;
